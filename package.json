@@ -1,6 +1,6 @@
 {
   "name": "dicio-br",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Um pacote para pegar definições do Dicio",
   "main": "dist/index.js",
   "scripts": {

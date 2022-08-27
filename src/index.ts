@@ -2,17 +2,31 @@ import { load } from "cheerio";
 
 import { type Dicio } from "../types";
 
-const DEFAULTS = { significados: [], etimologia: "", classe: "", frases: [], plural: "", separacaoSilabica: [], sinonimos: [] };
-
 export = async function buscar(termo: string): Promise<Dicio> {
     const req = await fetch(`https://dicio.com.br/${termo}`).then(e => e.text());
     const $ = load(req, { lowerCaseTags: true }, true);
 
-    if ($("title").text() === "Ocorreu um Erro") return { status: 404, ...DEFAULTS };
+    if ($("title").text() === "Ocorreu um Erro")
+        return {
+            status: 404,
+            significados: [],
+            etimologia: "",
+            classe: "",
+            frases: [],
+            plural: "",
+            separacaoSilabica: [],
+            sinonimos: [],
+        };
     else {
         const data: Dicio = {
             status: 200,
-            ...DEFAULTS,
+            significados: [],
+            etimologia: "",
+            classe: "",
+            frases: [],
+            plural: "",
+            separacaoSilabica: [],
+            sinonimos: [],
         };
 
         $("p[itemprop=description]")
