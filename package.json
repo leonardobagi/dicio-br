@@ -1,0 +1,30 @@
+{
+  "name": "dicio-br",
+  "version": "1.0.0",
+  "description": "Um pacote para pegar definições do Dicio",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "types": "types/index.d.ts",
+  "keywords": [
+    "dicio",
+    "dicionario",
+    "portugues",
+    "brasil"
+  ],
+  "author": "Leonardo Bagi",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.12"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leonardobagi/dicio-br.git"
+  },
+  "bugs": {
+    "url": "https://github.com/leonardobagi/dicio-br/issues"
+  },
+  "homepage": "https://github.com/leonardobagi/dicio-br#readme"
+}
