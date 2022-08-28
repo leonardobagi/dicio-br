@@ -1,16 +1,20 @@
 declare namespace dicio {
     export interface Dicio {
-        status: number;
         significados: string[];
-        etimologia: string;
         classe: string;
+    }
+
+    export interface DicioAPI {
+        data: Dicio[];
+        status: number;
+        frases: string[];
+        etimologia: string;
+        plural: string | null;
         sinonimos: string[];
         separacaoSilabica: string[];
-        plural: string;
-        frases: string[];
     }
 }
 
-declare function dicio(termo: string): Promise<dicio.Dicio>;
+declare function dicio(termo: string): Promise<dicio.DicioAPI>;
 
 export = dicio;
