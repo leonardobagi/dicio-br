@@ -44,7 +44,7 @@ export = async function buscar(termo: string): Promise<DicioAPI> {
         result.data = [];
         result.sinonimos = [];
 
-        $("p[itemprop=description]")
+        $("p.textonovo[itemprop=description]")
             .children()
             .each((_, el) => {
                 if ($(el).hasClass("etim")) result.etimologia = $(el).text().split(". ")[1];
